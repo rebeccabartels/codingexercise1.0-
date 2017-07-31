@@ -1,0 +1,68 @@
+stage.set_background("grid")
+sprite = codesters.Sprite("person1")
+
+sprite.set_size(0.4)
+sprite.set_speed(3)
+
+def collision(sprite, hit_sprite):
+    sprite.pen_down()
+    hit_sprite.hide()
+
+
+
+# add any other actions...
+
+
+#The Head of the Emoji 
+sprite.event_collision(collision)
+sprite.set_speed(2)
+sprite.glide_to(-150, 150)
+sprite.set_color('black')
+sprite.glide_to(-50, 200)
+sprite.glide_to(70, 200)
+sprite.glide_to(150, 150)
+sprite.glide_to(150, -50)
+sprite.glide_to(70, -100)
+sprite.glide_to(-55, -97)
+sprite.glide_to(-130, -50)
+sprite.glide_to(-130, 165)
+
+#The Eyes of the Emoji Remember to pen up
+
+#first eye
+sprite.pen_up()
+sprite.glide_to(-50, 100)
+sprite.pen_down() 
+sprite.glide_to(-100, 100)
+sprite.glide_to(-100, 55)
+sprite.glide_to(-50, 55)
+sprite.glide_to(-50, 100)
+
+#Second Eye
+sprite.pen_up()
+sprite.glide_to(50, 100)
+sprite.pen_down() 
+sprite.glide_to(100, 100)
+sprite.glide_to(100, 55)
+sprite.glide_to(50, 55)
+sprite.glide_to(50, 100)
+
+
+#The Mouth of the Emoji 
+sprite.pen_up()
+sprite.glide_to(-100, 0)
+sprite.pen_down()
+sprite.glide_to(-50, -50)
+sprite.glide_to(0, -50)
+sprite.glide_to(50, -50)
+sprite.glide_to(100, 0)
+sprite.glide_to(-100, 0)
+
+
+
+
+
+sprite.turn_left(360)
+
+
+
