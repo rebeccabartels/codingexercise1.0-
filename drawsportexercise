@@ -1,0 +1,24 @@
+stage.set_background("park")
+ball1 = codesters.Sprite("baseball", 150, -100)
+ball2 = codesters.Sprite("baseball", 150, 100)
+ball3 = codesters.Sprite("baseball", -150, 200)
+sprite = codesters.Sprite("person1")
+sprite.set_size(0.4)
+sprite.pen_down()
+sprite.set_speed(1)
+
+
+
+def collision(sprite, hit_sprite):
+    
+    hit_sprite.hide()
+    
+     
+
+sprite.event_collision(collision)
+
+sprite.glide_to(150, -100)
+
+sprite.set_color('black')
+sprite.glide_to(150, 100)
+sprite.glide_to(-150, 200)
