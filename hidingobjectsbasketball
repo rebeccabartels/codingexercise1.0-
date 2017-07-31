@@ -1,0 +1,30 @@
+
+
+stage.set_background("stadium")
+
+
+ball1 = codesters.Sprite("basketball", -150, -170)
+ball2 = codesters.Sprite("basketball", 0, -180)
+ball3 = codesters.Sprite("basketball", 120, -170)
+sprite = codesters.Sprite("player5")
+sprite.go_to(-225, -250)
+
+sprite.set_size(0.4)
+
+sprite.set_speed(1)
+
+
+
+def collision(sprite, hit_sprite):
+    hit_sprite.hide()
+     
+
+sprite.event_collision(collision)
+
+
+sprite.glide_to(-150, -170)
+sprite.glide_to(0, -180)
+sprite.glide_to(120, -170)
+
+
+
